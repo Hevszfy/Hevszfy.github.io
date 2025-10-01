@@ -11,27 +11,51 @@
     padding: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    background-image: image('Logo');
+    background-color: white;
   }
   header {
     position: relative;
-    height: 100vh;
-    background: url('https://pholystar.github.io/prismatik/assets/bg.jpg') no-repeat center center/cover;
+    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
+    color: chocolate;
     text-align: center;
+    font-weight: bold;
   }
   header h1 {
     font-size: 4em;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   }
+  button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #b26500;   /* Brownish background */
+    color: white;                /* White text */
+    padding: 15px 30px;          /* Top-bottom and left-right padding */
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;             /* Font size */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  button:hover {
+  background-color: #994d00;  /* Darker brown on hover */
+  }
   section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: 0 auto;
+    padding: 20px 20px;
+    max-width: 1000px;
+    margin: 100px;
+  }
+  section h1 {
+    font-size: 3em;
+  }
+  section h3 {
+    font-weight: bold;
   }
   .parallax {
     height: 500px;
@@ -50,6 +74,40 @@
       height: auto;
     }
   }
+  .crew-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .crew-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .crew-card:hover {
+      transform: translateY(-5px);
+    }
+    .crew-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .crew-info {
+      padding: 12px;
+    }
+    .crew-info h3 {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+    .crew-info p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
   #para1 { background-image: url('https://pholystar.github.io/prismatik/assets/para1.jpg'); }
   #para2 { background-image: url('https://pholystar.github.io/prismatik/assets/para2.jpg'); }
   
@@ -77,16 +135,68 @@
 
 <section>
   <h2 class="fade-in" style="animation-delay: 0.3s;">Fusi Imajinasi Teknologi Indsutri Kimia</h2>
-  <p class="fade-in" style="animation-delay: 0.6s;">TEKNOLOGI INDUSTRI KIMIA ANGKATAN 2025 "QUATROTIK" PROUDLY PRESENTS</p>
-  <p class="fade-in" style="animation-delay: 0.6s;">ONE FINE DAY WITH TIKIM "FUSION OF ART, CONNECTION OF HEART"</p>
+  <p class="fade-in" style="animation-delay: 0.6s;">Teknologi Industri Kimia Angkatan 2025 "Quatrotik" Proudly Presents, One Fine Day with TIKIM</p>
   <img src="images/IMG_1239.png" class="fade-in" style="animation-delay: 0.9s;" alt="Banner" width="750" height="375">
+  <button class="fade-in" style="animation-delay: 0.9s;" onclick="location.href='invitation.html'">Letter Of Invitation</button>
 </section>
 
-<div id="para1" class="parallax"></div>
-
 <section>
-  <h2 class="fade-in" style="animation-delay: 0.3s;">Fusi Imajinasi Teknologi Indsutri Kimia</h2>
-  <p class="fade-in" style="animation-delay: 0.6s;">TEKNOLOGI INDUSTRI KIMIA ANGKATAN 2025 "QUATROTIK" PROUDLY PRESENTS</p>
+  <h1>MEET THE CREW</h1>
+  <div class="crew-container">
+    <!-- Card 1 -->
+    <div class="crew-card">
+      <img src="images/PO.JPG" alt="Zaidan">
+      <div class="crew-info">
+        <h3>Zaidan Athala</h3>
+        <p>PO</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="crew-card">
+      <img src="images/VPO.JPG" alt="Jihan">
+      <div class="crew-info">
+        <h3>Jihan</h3>
+        <p>VPO</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="crew-card">
+      <img src="rizki.jpg" alt="Rizki D. S.">
+      <div class="crew-info">
+        <h3>Rizki D. S.</h3>
+        <p>Bendahara 1</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="crew-card">
+      <img src="jevan.jpg" alt="Jevan">
+      <div class="crew-info">
+        <h3>Jevan</h3>
+        <p>Bendahara 2</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="crew-card">
+      <img src="prandya.jpg" alt="Prandya Rifa">
+      <div class="crew-info">
+        <h3>Prandya Rifa</h3>
+        <p>Sekretaris 1</p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="crew-card">
+      <img src="elisabeth.jpg" alt="Elisabeth I. S.">
+      <div class="crew-info">
+        <h3>Elisabeth I. S.</h3>
+        <p>Sekretaris 2</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div id="para2" class="parallax"></div>
